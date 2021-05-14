@@ -17,11 +17,10 @@ class MainActivity : AppCompatActivity() {
 
         btn.setOnClickListener() {
             val intent = Intent(this, SubActivity::class.java)
+            intent.putExtra("number", insertedNumber.getText().toString())
 
             if(insertedNumber.length() != 0)
-                intent.putExtra("number", insertedNumber.getText().toString())
                 startActivity(intent)
-
         }
 
     }
